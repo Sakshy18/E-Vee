@@ -175,7 +175,7 @@ export default function Home() {
             </div>
             </div>
             
-            <div className='prod-contain'>
+            {/* <div className='prod-contain'>
             <div className="prod-carousal">
       <Carousel
         showArrows={true}
@@ -189,9 +189,9 @@ export default function Home() {
       </Carousel>
     </div>
 
-            </div>
+            </div> */}
 
-            {/* <div>
+            <div>
                 <div className='rove-cont'>
                     <div>
                         <img src={IMG20} className='rove-img' alt='rove' />
@@ -203,7 +203,7 @@ export default function Home() {
                         <button type='button' className='learn-btn' >LEARN MORE</button>
                     </div>
                 </div>
-            </div> */}
+            </div>
 
 
      

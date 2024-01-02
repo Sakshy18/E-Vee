@@ -29,10 +29,10 @@ export default function Footer() {
                             </div>
                             <div>
                             <div className='footer-phone'>
-                                +91 8273670090
+                                +91 9172100475
                             </div>
                             <div className='footer-email'>
-                                e2em@info.com
+                                E-Vee@info.com
                             </div>
                             <div className='footer-address'>
                                 #10, Electropreneur Park, Library Building, 3rd Floor, South Campus, University Of Delhi, 110021
@@ -95,7 +95,7 @@ export default function Footer() {
                     </div>
                     <div className='footer-copyright'>
                         <div className='footer-copyright-text'>
-                            © Copyright 2024 E2EM TECHNOLOGIES. All Rights Reserved. 
+                            © Copyright 2024 E-Vee TECHNOLOGIES. All Rights Reserved. 
                         </div>
                         {/* <div className='footer-copyright-icons'>
                         <FontAwesomeIcon className='footer-icon' icon="fa-brands fa-instagram" />

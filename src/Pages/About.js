@@ -3,7 +3,7 @@ import PartnersCarosel from '../Components/PartnersCarosel'
 import BIRTH from '../images/birth.png'
 import TELECOM from '../images/Telecom.png'
 import DI from '../images/DI.png'
-import Blog1 from './Blog1'
+// import Blog1 from './Blog1'
 // import Blog2 from './Blog2'
 import {Routes, Route, useNavigate} from 'react-router-dom';
 
@@ -28,20 +28,7 @@ const blogs = [
 
 
 export default function About() {
-  const navigate = useNavigate();
-
-  const navigateToBlog1 = () => {
-    // 👇️ navigate to /contacts
-    navigate('/blog1');
-  };
-  const navigateToBlog2 = () => {
-    // 👇️ navigate to /contacts
-    navigate('/blog1');
-  };
-  const navigateToBlog3 = () => {
-    // 👇️ navigate to /contacts
-    navigate('/book');
-  };
+  
 
   return (
     <>
@@ -97,47 +84,7 @@ export default function About() {
         </div>
       </div>
 
-      <div>
-        <div className='blog-main-cont'>
-          <div>
-            <h1 className='blog-main-head'>What we are upto</h1>
-          </div>
-          <div className='row'>
-          {
-            blogs.map(({src, heading, text})=>{
-              return(
-                <div className='col-md-4 col-sm-6'>
-              <div className='blog-cont'>
-              <div className='blog-head'>
-                    {heading}
-                  </div>
-                  
-                <div className='blog-img-cont'>
-                  <img src={src} className='blog-img' alt='1' />
-                </div>
-                <div className='blog-text-cont'>
-                 
-                  <div className='blog-details'>
-                    {text}
-                  </div>
-                  <div className='blog-btn-cont'>
-                    <button type='submit' className='blog-btn' onClick={navigateToBlog1}>Read More</button>
-                    <Routes>
-                            <Route path="/blog1" element={<Blog1 />} />
-                          
-                          </Routes>
-                  </div>
-                </div>
-              </div>
-            </div>
-              )
-            })
-          }
-            
-            
-          </div>
-        </div>
-      </div>
+      
     </>
   )
 }
