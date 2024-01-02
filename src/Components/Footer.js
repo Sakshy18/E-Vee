@@ -35,7 +35,7 @@ export default function Footer() {
                                 E-Vee@info.com
                             </div>
                             <div className='footer-address'>
-                                #10, Electropreneur Park, Library Building, 3rd Floor, South Campus, University Of Delhi, 110021
+                                #10, Electropreneur Parks, Library Building, 5th Floor, South Campus, University Of Delhi, 110021
                             </div>
                             </div>
                             
