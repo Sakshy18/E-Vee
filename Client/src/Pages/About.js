@@ -22,7 +22,7 @@ const blogs = [
   {
     src: DI,
     heading: `Digital India Week`,
-    text: `E2EM's team recently participated in the prestigious Digital India Week 2022. With the theme 'Catalyzing New India's Techade,' the event ...`
+    text: `E2EM's team recently participated in prestigious Digital India Week 2022. With the theme 'Catalyzing New India's Techade,' the event ...`
   },
 ]
 
