@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/E-Vee/static/css/main.99fb50ef.css",
-    "main.js": "/E-Vee/static/js/main.d8e4ff6d.js",
+    "main.css": "/E-Vee/static/css/main.7623a96e.css",
+    "main.js": "/E-Vee/static/js/main.274b5020.js",
     "static/js/787.c4e7f8f9.chunk.js": "/E-Vee/static/js/787.c4e7f8f9.chunk.js",
     "static/media/zing_new.png": "/E-Vee/static/media/zing_new.28bc112df18d2e60d66a.png",
     "static/media/backg4.jpg": "/E-Vee/static/media/backg4.f7b551756271cee63958.jpg",
@@ -15,7 +15,6 @@
     "static/media/our-app.png": "/E-Vee/static/media/our-app.be8899f38635043f6060.png",
     "static/media/Telecom.png": "/E-Vee/static/media/Telecom.6998b784713394ce352c.png",
     "static/media/homebg5.png": "/E-Vee/static/media/homebg5.8f281142a9e6f396f986.png",
-    "static/media/img-contact.png": "/E-Vee/static/media/img-contact.8389f71bcf10e51f6539.png",
     "static/media/googleplay.png": "/E-Vee/static/media/googleplay.e3642fb95996396953cb.png",
     "static/media/UOD.png": "/E-Vee/static/media/UOD.baa6c7a705b137d71f2e.png",
     "static/media/iesa.png": "/E-Vee/static/media/iesa.c704af52ca94b5f4147c.png",
@@ -33,12 +32,12 @@
     "static/media/f10.png": "/E-Vee/static/media/f10.84fa2a0b1854520dc178.png",
     "static/media/revicons.woff": "/E-Vee/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/E-Vee/index.html",
-    "main.99fb50ef.css.map": "/E-Vee/static/css/main.99fb50ef.css.map",
-    "main.d8e4ff6d.js.map": "/E-Vee/static/js/main.d8e4ff6d.js.map",
+    "main.7623a96e.css.map": "/E-Vee/static/css/main.7623a96e.css.map",
+    "main.274b5020.js.map": "/E-Vee/static/js/main.274b5020.js.map",
     "787.c4e7f8f9.chunk.js.map": "/E-Vee/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.99fb50ef.css",
-    "static/js/main.d8e4ff6d.js"
+    "static/css/main.7623a96e.css",
+    "static/js/main.274b5020.js"
   ]
 }
