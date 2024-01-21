@@ -1,5 +1,7 @@
 // import React from 'react'
 import IMG1 from '../images/img1.png'
+import Navbar from '../Components/Navbar';
+// import Navbar from "./Components/Navbar";
 import ZING from '../images/caros-1.png'
 import ROVE from '../images/caros-2.png'
 import I1 from '../images/1.png'
@@ -113,6 +115,7 @@ export default function Home() {
   }
   return (
     <>
+  
         
 {/*             
             <div className='know-main-cont'>

@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from '../Components/Navbar';
 import PartnersCarosel from '../Components/PartnersCarosel'
 import BIRTH from '../images/birth.png'
 import TELECOM from '../images/Telecom.png'
@@ -32,6 +33,7 @@ export default function About() {
 
   return (
     <>
+    
       <div>
         <div>
           <div className='main-cont-mv'>

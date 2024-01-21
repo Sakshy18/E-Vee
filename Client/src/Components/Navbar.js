@@ -33,7 +33,7 @@ export default function Navbar() {
           <Link className="nav-link" to="about">About Us</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="contact">Contact Us</Link>
+          <Link className="nav-link" to="Login">Login</Link>
         </li>
 
         <li className="nav-item" style={{marginRight: '0px'}}>
