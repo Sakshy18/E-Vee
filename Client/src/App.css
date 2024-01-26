@@ -1160,12 +1160,12 @@ section {
   background-color:var(--PrimaryColor);
 }
 .log-form {
-  color: #000;
+  color: #dcdcdc;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   flex-grow: 1;
-  padding-bottom: 1rem;
+  padding-bottom:5px;
 }
 
 a, a:visited {
