@@ -1,6 +1,10 @@
 import { useRef, useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
+// const LOGIN_URL = '/auth';
+import AuthContext from "../context/AuthProvider";
+import axios from 'axios';
 const Login = () => {
+    const {setAuth} = useContext(AuthContext);
     const userRef = useRef();
     const errRef = useRef();
 
@@ -23,6 +27,35 @@ const Login = () => {
         setUser('');
         setPwd('');
         setSuccess(true);
+
+         try {
+            const response = await axios.post('http://localhost:8081/signup',
+                JSON.stringify({ user, pwd }),
+                {
+                    headers: { 'Content-Type': 'application/json' },
+                    withCredentials: true
+                }
+            );
+            console.log(JSON.stringify(response?.data));
+            //console.log(JSON.stringify(response));
+            const accessToken = response?.data?.accessToken;
+            const roles = response?.data?.roles;
+            setAuth({ user, pwd, roles, accessToken });
+            setUser('');
+            setPwd('');
+            setSuccess(true);
+        } catch (err) {
+            if (!err?.response) {
+                setErrMsg('No Server Response');
+            } else if (err.response?.status === 400) {
+                setErrMsg('Missing Username or Password');
+            } else if (err.response?.status === 401) {
+                setErrMsg('Unauthorized');
+            } else {
+                setErrMsg('Login Failed');
+            }
+            errRef.current.focus();
+        }
 
     }
 
@@ -47,6 +80,7 @@ const Login = () => {
                         <input
                             type="text"
                             id="username"
+                            name='username'
                             ref={userRef}
                             autoComplete="off"
                             onChange={(e) => setUser(e.target.value)}
@@ -58,11 +92,12 @@ const Login = () => {
                         <input
                             type="password"
                             id="password"
+                            name='password'
                             onChange={(e) => setPwd(e.target.value)}
                             value={pwd}
                             required
                         />
-                        <button className='login-but'>LOGIN</button>
+                        <button type='submit'className='login-but'>LOGIN</button>
                     </form>
                     <p>
                         Need an Account?<br />

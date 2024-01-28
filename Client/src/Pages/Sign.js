@@ -2,11 +2,11 @@ import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
-
-
+const REGISTER_URL = 'http://localhost:8081/signup';
 const Register = () => {
     const userRef = useRef();
     const errRef = useRef();
@@ -52,6 +52,37 @@ const Register = () => {
             setErrMsg("Invalid Entry");
             return;
         }
+
+        
+        try {
+            const response = await axios.post(REGISTER_URL,
+                JSON.stringify({ user, pwd }),
+                {
+                    headers: { 'Content-Type': 'application/json' },
+                    withCredentials: true
+                }
+            );
+            console.log(response?.data);
+            console.log(response?.accessToken);
+            console.log(JSON.stringify(response))
+            setSuccess(true);
+            //clear state and controlled inputs
+            //need value attrib on inputs for this
+            setUser('');
+            setPwd('');
+            setMatchPwd('');
+        } catch (err) {
+            if (!err?.response) {
+                setErrMsg('No Server Response');
+            } else if (err.response?.status === 409) {
+                setErrMsg('Username Taken');
+            } else {
+                setErrMsg('Registration Failed')
+            }
+            errRef.current.focus();
+        }
+    
+        
         
     }
 
@@ -77,6 +108,7 @@ const Register = () => {
                         <input
                             type="text"
                             id="username"
+                            name="username"
                             ref={userRef}
                             autoComplete="off"
                             onChange={(e) => setUser(e.target.value)}
@@ -103,6 +135,7 @@ const Register = () => {
                         <input
                             type="password"
                             id="password"
+                            name="password"
                             onChange={(e) => setPwd(e.target.value)}
                             value={pwd}
                             required
@@ -140,7 +173,7 @@ const Register = () => {
                             Must match the first password input field.
                         </p>
 
-                        <button  className='login-but' disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
+                        <button type="submit" className='login-but' disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
                     </form>
                     <p>
                         Already registered?<br />
