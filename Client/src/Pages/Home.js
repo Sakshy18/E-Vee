@@ -1,5 +1,7 @@
 // import React from 'react'
 import IMG1 from '../images/img1.png'
+import Navbar from '../Components/Navbar';
+// import Navbar from "./Components/Navbar";
 import ZING from '../images/caros-1.png'
 import ROVE from '../images/caros-2.png'
 import I1 from '../images/1.png'
@@ -113,6 +115,7 @@ export default function Home() {
   }
   return (
     <>
+  
         
 {/*             
             <div className='know-main-cont'>
@@ -175,7 +178,7 @@ export default function Home() {
             </div>
             </div>
             
-            <div className='prod-contain'>
+            {/* <div className='prod-contain'>
             <div className="prod-carousal">
       <Carousel
         showArrows={true}
@@ -189,9 +192,9 @@ export default function Home() {
       </Carousel>
     </div>
 
-            </div>
+            </div> */}
 
-            {/* <div>
+            <div>
                 <div className='rove-cont'>
                     <div>
                         <img src={IMG20} className='rove-img' alt='rove' />
@@ -203,7 +206,7 @@ export default function Home() {
                         <button type='button' className='learn-btn' >LEARN MORE</button>
                     </div>
                 </div>
-            </div> */}
+            </div>
 
 
      
